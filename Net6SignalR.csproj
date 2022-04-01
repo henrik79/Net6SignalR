@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="client-app" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>    
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <Target Name="client-app" BeforeTargets="ComputeFilesToPublish">
+      <Exec Command="npm install" WorkingDirectory="client-app"></Exec>
+      <Exec Command="npx vite build" WorkingDirectory="client-app"></Exec>
+  </Target>
+</Project>
