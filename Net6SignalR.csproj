@@ -10,14 +10,6 @@
     <Content Remove="client-app" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="README.md" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="README.md" />
-  </ItemGroup>
-
   <ItemGroup>    
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
   </ItemGroup>
