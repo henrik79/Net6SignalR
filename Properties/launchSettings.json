@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "Jti.Sweden.LocalData.Api": {
+    "Api": {
       "commandName": "Project",
       "launchUrl": "swagger",
       "environmentVariables": {
